@@ -1,1 +1,16 @@
+import statistics
 
+def calculate_variance(values):
+    sum1 = 0
+    for i in values:
+        sum1 = sum1 + pow((i - mean),2)
+    return sum1/len(values)
+
+def calculate_mean(values):
+    return sum(values)/len(values)
+
+values = list(eval(input("Enter the numbers: ")))
+mean = calculate_mean(values)
+variance = calculate_variance(values)
+print("The required mean is: ", mean, " and the required population variance is: ", variance)
+print("The default sample variance is: ", statistics.variance(values))
